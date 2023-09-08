@@ -13,7 +13,8 @@
         </div>
       <% } %>
 
-      <form method="post" action="/contacts/update">
+      <form method="post" action="/contacts?_method=PUT">
+        <input type="hidden" name="_id" value="<%= contact._id %>">
         <input type="hidden" name="oldNama" value="<%= contact.nama %>">
         <div class="form-group">
           <label for="nama">Nama</label>
